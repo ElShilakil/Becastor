@@ -23,13 +23,15 @@ body{
 .header{
     background-color: rgba(109, 147, 5, 0.5);
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content:space-between;
+    align-items:center;
     height: 85px;
     padding: 5px 10%;
+    width: 90%;
 }
 
 .header .logo{
+    width: 20%;
     cursor: pointer;
     margin-right: auto;
 }
@@ -45,6 +47,9 @@ body{
 }
 
 .header .nav-links{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
     list-style: none;
 }
 
