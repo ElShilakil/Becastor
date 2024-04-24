@@ -26,7 +26,7 @@
     </header>
     
     <div class="wrapper">
-        <form action="iniciarSes.php" method="POST">
+        <form action="../php/iniciarSes.php" method="POST">
             <h1>Iniciar Sesión</h1>
             <!-- Div para mostrar mensaje de error  -->
             <div id="div_error"></div> 
@@ -52,39 +52,40 @@
                 <p>¿No tienes una cuenta?, <a href="#">¡Registrate aquí!</p>
             </div>
         </form>
-        <script>
-            // Leer la URL para mostrar el mensaje de error
-            const urlParams = new URLSearchParams(window.location.search);
-            const error = urlParams.get('error');
-            if (error === '1') {
-                const div_error = document.getElementById('div_error'); //Creacion del objeto Div_error
-                    const mostrar_erro = document.createElement('div');//creacion de un nuevo div
-                    mostrar_erro.textContent = "Usuario o contraseña incorrectos"; //asignacion de Texto al Div
-
-                // Personalizacion del div
-                div_error.style.backgroundColor = '#e60f0f79';
-                
-                div_error.style.
-
-                div_error.style.display = "flex";
-                div_error.style.height = "40px";
-                div_error.style.alignItems = "center";
-                div_error.style.justifyContent = "center";
-                /*margen*/
-                div_error.style.marginTop = "-15px";
-                div_error.style.marginBottom = "10px";
-                /*borde*/
-                div_error.style.border = "solid";
-                div_error.style.borderColor ="#d40101";
-                div_error.style.borderRadius = '10px';
-                    /*Personalizar mensaje*/
-                    mostrar_erro.style.fontFamily = "'Overpass', sans-serif";
-                    mostrar_erro.style.fontSize = "20px"
-                    mostrar_erro.style.textAlign = "center"
-                    mostrar_erro.style.color  ="white"
-                div_error.appendChild(mostrar_erro); //Agregar nuevo div con mensaje al div_error
-            }
-        </script>
+        
     </div>
+    <script>
+        // Leer la URL para mostrar el mensaje de error
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        if (error === '1') {
+            const div_error = document.getElementById('div_error'); //Creacion del objeto Div_error
+                const mostrar_erro = document.createElement('div');//creacion de un nuevo div
+                mostrar_erro.textContent = "Usuario o contraseña incorrectos"; //asignacion de Texto al Div
+
+            // Personalizacion del div
+            div_error.style.backgroundColor = '#e60f0f79';
+            
+            div_error.style.
+
+            div_error.style.display = "flex";
+            div_error.style.height = "40px";
+            div_error.style.alignItems = "center";
+            div_error.style.justifyContent = "center";
+            /*margen*/
+            div_error.style.marginTop = "-15px";
+            div_error.style.marginBottom = "10px";
+            /*borde*/
+            div_error.style.border = "solid";
+            div_error.style.borderColor ="#d40101";
+            div_error.style.borderRadius = '10px';
+                /*Personalizar mensaje*/
+                mostrar_erro.style.fontFamily = "'Overpass', sans-serif";
+                mostrar_erro.style.fontSize = "20px"
+                mostrar_erro.style.textAlign = "center"
+                mostrar_erro.style.color  ="white"
+            div_error.appendChild(mostrar_erro); //Agregar nuevo div con mensaje al div_error
+        }
+    </script>
 </body>
 </html>

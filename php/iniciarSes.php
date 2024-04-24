@@ -1,6 +1,6 @@
 <?php
 session_start(); // Iniciar sesión
-include("con_db.php"); // Incluir el archivo de conexión a la base de datos
+include("conexion.php"); // Incluir el archivo de conexión a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -17,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (mysqli_num_rows($resultado) == 1) {
         // Si se encuentra una fila, las credenciales son correctas
         $_SESSION['correo'] = $correo; // Guardar el correo electrónico en la sesión
-        header("location: estudianteInicio.html"); // Redirigir al perfil del usuario
+        header("location: ../html/estudianteInicio.html"); // Redirigir al perfil del usuario
         exit();
     } else {
         // Si no se encuentra ninguna fila, las credenciales son incorrectas
-        header("location: login.html?error=1");   
+        header("location: ../html/login.html?error=1");   
     }
 }
 ?>

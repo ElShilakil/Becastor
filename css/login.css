@@ -22,7 +22,7 @@ body {
 
 form {
     width: 500px; /* Puedes ajustar este ancho según tus necesidades */
-    height: auto; /* Ahora la altura será determinada por el contenido */
+    /* height: auto; Ahora la altura será determinada por el contenido */
     padding: 20px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);

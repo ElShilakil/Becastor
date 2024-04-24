@@ -1,5 +1,5 @@
 <?php
-include("con_db.php"); // Incluir el archivo de conexión a la base de datos
+include("conexion.php"); // Incluir el archivo de conexión a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar si se ha enviado el formulario por POST
