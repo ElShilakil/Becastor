@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     width: 100%;
     overflow-y: auto;
@@ -9,7 +11,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+     overflow-y:hidden;
+    /*overflow-x: none; */
 }
+
+body::-webkit-scrollbar {
+    /* margin-top: 50px; */
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+    display: none; /* Ocultar scroll */
+} 
+
 .bx-menu{
     font-size: 50px;
     background-color: transparent;
@@ -75,9 +87,11 @@ body {
 }
 
 .container{
-    width: 95%;
-    overflow-y:scroll;
-    padding: 20px;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #div_busqueda{
@@ -105,11 +119,44 @@ body {
     padding-left: 3px;
 }
 
+#contenedor_opciones{
+    width: 100%;
+    overflow-y:scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#contenedor_opciones::-webkit-scrollbar {
+    background-color: transparent;
+    border-radius: 4px;
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+} 
+
+#contenedor_opciones::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 4px;
+}
+
+#contenedor_opciones::-webkit-scrollbar-thumb:hover {
+    background: #74c42dce;
+    box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#contenedor_opciones::-webkit-scrollbar-thumb:active {
+    background-color: #69b329fe;
+}
+
 .card{
-    width: 30%;
+    width: 29%;
     border-radius: 20px;
     backdrop-filter: blur(5px);
     padding: 0px 0px 10px 0px;
+    margin: 2%;
+    color: whitesmoke;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.324);
+    background-color: rgba(255, 255, 255, 0.208);
 }
 
 .card img{
@@ -119,10 +166,34 @@ body {
 }
 
 .card h3{
+    font-size:2.3vw;
     width: 100%;
     text-align: center;
 }
 
-.card p{
+.etiquetas{
+    padding: 0px 2px 0px 2px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+p{
     padding:0px 10px 0px 10px;
+}
+
+.etiquetas p{
+    border-radius: 10px;
+    background-color: #ffbb0e6a;
+    font-size: 1.1vw;
+    margin: 3px;
+}
+
+.descripcion_beca, .descripcion_beca strong{
+    margin-top: 5px;
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: "Quicksand", sans-serif;
 }

@@ -9,6 +9,17 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+body::-webkit-scrollbar {
+    margin-top: 50px;
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+     display: none;  /*Ocultar scroll */
+} 
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #69b329fe;
+}
+
 main{
     position: relative;
     z-index: -10;

@@ -10,3 +10,7 @@ document.querySelector('.nav-links .bx-menu').addEventListener("click", () => {
         menu_desplegable.style.display = "none";
     }
 });
+
+const contenedor_opciones = document.getElementById('contenedor_opciones');
+var alto =  window.innerHeight -180;
+contenedor_opciones.style.maxHeight = alto + 'px';
